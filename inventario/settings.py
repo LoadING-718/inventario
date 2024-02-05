@@ -53,6 +53,23 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware', #corsheaders
+    'django.middleware.common.CommonMiddleware', 
+]
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding', 
+    'authorizatión',
+    'content-type',
+    'dnt',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with', 
+    'Access-Control-Allow-Headers'
 ]
 
 ROOT_URLCONF = 'inventario.urls'
@@ -144,3 +161,19 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'NON_FIELD_ERRORS_KEY':'error',
+    'DEFAULT_AUTHENTICATION_CLASSES':(
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ),
+    'DEFAULT_RENDERER_CLASSES': ( #Render Django Rest Framework
+        'rest_framework.renderers.JSONRenderer',
+    ),
+    'DEFAULT_PARSER_CLASSES': ( #Parse Djano Rest Framework
+        'rest_framework.parsers.JSONParser',
+        'rest_framework.parsers.FormParser',
+        'rest_framework.parsers.MultiPartParser',
+    )
+}
