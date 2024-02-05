@@ -25,12 +25,12 @@ environ.Env.read_env(os.path.join( '.env'))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('SECRET_KEY')
-print(SECRET_KEY)
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG')
-print(DEBUG)
+
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=lambda value: [data.strip() for data in value.split(',')])
-print(ALLOWED_HOSTS)
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -173,7 +173,7 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_PARSER_CLASSES': ( #Parse Djano Rest Framework
         'rest_framework.parsers.JSONParser',
-        'rest_framework.parsers.FormParser',
-        'rest_framework.parsers.MultiPartParser',
+        #'rest_framework.parsers.FormParser',
+        #'rest_framework.parsers.MultiPartParser',
     )
 }
