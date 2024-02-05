@@ -173,7 +173,5 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_PARSER_CLASSES': ( #Parse Djano Rest Framework
         'rest_framework.parsers.JSONParser',
-        #'rest_framework.parsers.FormParser',
-        #'rest_framework.parsers.MultiPartParser',
     )
 }
