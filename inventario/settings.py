@@ -72,6 +72,8 @@ CORS_ALLOW_HEADERS = [
 ]
 
 CORS_ALLOW_METHODS = (
+    "DELETE",
+    "GET",
     "OPTIONS",
     "PATCH",
     "POST",
@@ -79,13 +81,7 @@ CORS_ALLOW_METHODS = (
 )
 CORS_ALLOW_CREDENTIALS = True
 
-"""CORS_ALLOWED_ORIGINS = [
-   # "https://inventario-v6bv.onrender.com/read/",
-    #"https://inventario-v6bv.onrender.com/create/",
-    "https://inventario-v6bv.onrender.com",
-    "http://localhost:8000",
-   
-]"""
+CORS_ALLOWED_ORIGINS = ['*']
 ROOT_URLCONF = 'inventario.urls'
 
 TEMPLATES = [
