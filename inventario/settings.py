@@ -29,7 +29,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG')
 
-ALLOWED_HOSTS = ["*"]#config('ALLOWED_HOSTS', cast=lambda value: [data.strip() for data in value.split(',')])
+ALLOWED_HOSTS = ['*']#config('ALLOWED_HOSTS', cast=lambda value: [data.strip() for data in value.split(',')])
 
 # Application definition
 
@@ -54,7 +54,11 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware', #corsheaders
-    'django.middleware.common.CommonMiddleware', 
+    'django.middleware.common.CommonMiddleware' 
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "localhost:3002",
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
