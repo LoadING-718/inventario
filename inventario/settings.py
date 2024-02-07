@@ -189,8 +189,8 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.BrowsableAPIRenderer',
     ),
     'DEFAULT_PARSER_CLASSES': ( #Parse Djano Rest Framework
-        'rest_framework.parsers.JSONParser',
-        'rest_framework.parsers.FormParser',
-        'rest_framework.parsers.MultiPartParser',
+        'rest_framework.parsers.JSONParser', #media_type = application/json
+        'rest_framework.parsers.FormParser', #media_type = application/x-ww-form-urlenconded
+        'rest_framework.parsers.MultiPartParser', #media_type = multipart/form-data
     )
 }
