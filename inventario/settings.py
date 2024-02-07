@@ -58,7 +58,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "localhost:3002",
+    "http://localhost:3002",
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
