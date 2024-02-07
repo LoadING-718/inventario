@@ -59,7 +59,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3002",
+    'http://localhost:3002',
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
@@ -85,6 +85,10 @@ CORS_ALLOW_METHODS = (
     'PUT',
 )
 CORS_ALLOW_CREDENTIALS = True
+
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3002',
+]
 
 ROOT_URLCONF = 'inventario.urls'
 
