@@ -59,7 +59,6 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-
 CORS_ALLOW_HEADERS = [
     'accept',
     'accept-encoding', 
@@ -69,7 +68,9 @@ CORS_ALLOW_HEADERS = [
     'user-agent',
     'x-csrftoken',
     'x-requested-with', 
-    'Access-Control-Allow-Headers'
+    'Access-Control-Allow-Headers', 
+    'Access-Control-Allow-Origin',
+    'Access-Control-Allow-Methods',
 ]
 
 ROOT_URLCONF = 'inventario.urls'
