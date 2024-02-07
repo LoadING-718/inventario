@@ -82,7 +82,7 @@ CORS_ALLOW_METHODS = (
     'POST',
     'PUT',
 )
-CORS_ALLOW_CREDENTIALS = True
+
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3002',
