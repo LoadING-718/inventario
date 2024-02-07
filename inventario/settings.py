@@ -57,7 +57,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware', 
 ]
 
-CORS_ORIGIN_ALLOW_ALL = True
+#CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ALLOW_HEADERS = [
     'accept',
@@ -69,10 +69,24 @@ CORS_ALLOW_HEADERS = [
     'x-csrftoken',
     'x-requested-with', 
     'Access-Control-Allow-Headers', 
-    'Access-Control-Allow-Origin',
-    'Access-Control-Allow-Methods',
 ]
 
+CORS_ALLOW_METHODS = (
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+)
+
+CORS_ALLOWED_ORIGINS = [
+    "https://inventario-v6bv.onrender.com/read/",
+    "https://inventario-v6bv.onrender.com/create/",
+    "https://inventario-v6bv.onrender.com",
+    "http://localhost:8000",
+   
+]
 ROOT_URLCONF = 'inventario.urls'
 
 TEMPLATES = [
@@ -174,5 +188,7 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_PARSER_CLASSES': ( #Parse Djano Rest Framework
         'rest_framework.parsers.JSONParser',
+        'rest_framework.parsers.FormParser',
+        'rest_framework.parsers.MultiPartParser',
     )
 }
