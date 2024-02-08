@@ -186,7 +186,7 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_RENDERER_CLASSES': ( #Render Django Rest Framework
         'rest_framework.renderers.JSONRenderer',
-        'rest_framework.renderers.BrowsableAPIRenderer',
+        #'rest_framework.renderers.BrowsableAPIRenderer',
     ),
     'DEFAULT_PARSER_CLASSES': ( #Parse Djano Rest Framework
         'rest_framework.parsers.JSONParser', #media_type = application/json
