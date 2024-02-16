@@ -84,10 +84,6 @@ CORS_ALLOW_METHODS = (
 )
 
 
-CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3002',
-]
-
 ROOT_URLCONF = 'inventario.urls'
 
 TEMPLATES = [
